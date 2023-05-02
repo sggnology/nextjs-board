@@ -3,8 +3,8 @@ import BoardContent from "./board-content";
 const BoardPost = ({ boardPostDataList }) => {
     return (
         <div>
-            {boardPostDataList.map((boardpostData, index) =>(
-                <BoardContent key={`board-content-${index}`} content={boardpostData.content} />
+            {boardPostDataList.map((boardPostData, index) =>(
+                <BoardContent key={`board-content-${index}`} content={boardPostData.content} />
             ))}
         </div>
     )
