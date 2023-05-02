@@ -18,9 +18,9 @@ db.connect((error) =>{
     console.log('데이터베이스 연결이 정상적으로 이루어졌습니다.');
 });
 
-const query = (queryString) => {
+const query = (queryString, params) => {
     return new Promise((resolve, reject) => {
-        db.query(queryString, (error, results, fields) => {
+        db.query(queryString, params, (error, results, fields) => {
             if(error){
                 reject(error);
             }
